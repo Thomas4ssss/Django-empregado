@@ -1,0 +1,20 @@
+Este projeto visa fazer m sistema web de cadastro de empregados. Com a aba que o Chefe irá cadastrá-los 
+no sistema, deposis, cada um irá criar seu email e senha com base na categoria de usuário criado pelo chefe.
+Este site terá com algum requisitos:
+- Sistema de bater pontos
+- Sistema de Avaliação
+- Informações sobre os empregados (função que desempenha, idade, nome, empregos anteriores, salário)
+- Sistema ara saber se há alguma reclamação de um funcionário sobre o outro. 
+- tempo na empresa por usuario
+
+1° --> Criação de Models sobre informações sobre os empregados
+       
+       - Para isso irei criar o app usuários e criar a Model lá dentro, essa aba será mais da parte do Chefe, que irá 
+       cadastrar o empregado.
+       - Coloquei a categoria de cargo, no qual o chefe irá cadastrar cargos de sua própria empresa, e depois colocar seu 
+       funcionário em seu respectivo cargo
+       - Cadastrei a aba de ADMIN para fazer os cadastros
+       - Comecei a fazer a aba de views e templates
+
+       CONTINUAR
+       

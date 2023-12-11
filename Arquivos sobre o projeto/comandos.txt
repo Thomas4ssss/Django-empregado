@@ -1,0 +1,55 @@
+primeiro comando: django-admin startproject [NOME DO SITE] .
+segundo comando: django-admin startapp [NOME DO APP]
+comando para rodar o site: py manage.py runerver OU python manage.py runserver (escrever python3 dá erro não sei pq)
+
+-----------------------------------------XXXX-----------------------------------------
+
+Comandos principais:
+
+por padrão o comando runsesrver inicia o servidor de desenvolvimento IP interno na porta 8000, caso queira trocar, passe-a como argumento
+--> py manage.py runserver 8080
+Se quiser mudar o IP de servidor junto com a porta:
+--> py manage.py runserver 0.0.0.0:8000
+
+-----------------------------------------XXXX-----------------------------------------
+
+Método View:
+
+Argumentos de path() na url:
+path(route, view, kwargs, name)
+
+route:rota de endereço da web
+view: nome da função que procurará na aba views do app
+kwargs: argumentos que deseja passar
+name: nome de sua URL para fazer referenciar ela de qualquer lugar no Django
+
+-----------------------------------------XXXX-----------------------------------------
+
+Criando um banco de dados
+
+Inclua em 'INSTALLED_APPS" o seu app 
+Para criar um banco de dados:
+--> py manage.py makemigrations [NOME_DO_APP] (sempre que modificar modelos use este comando)
+--> py manage.py migrate (sempre que modificar modelos use este comando)
+Para ver como seria os comandos em SQL:
+--> py manage.py sqlmigrate [NOME_DO_APP] 0001
+
+-----------------------------------------XXXX-----------------------------------------
+
+Criando um superuser:
+
+--> py manage.py createsuperuser
+Para tornar a aplicação de enquetes editáveisno site da administração:
+Na pasta admin.py > 
+from .models import Question
+admin.site.register(Question)
+
+Parte de templates:
+na aba settings --> [os.path.join(BASE_DIR, 'templates')]
+
+-----------------------------------------XXXX-----------------------------------------
+
+Para pegar as informações colocadas nos forms, faça o seguinte:
+--> No html você irá enviar as informações do formulário por meio de um método (GET ou POST),
+    então na aba "views" você irá colocar -- name = request.POST.get('name', 'Vazio')
+
